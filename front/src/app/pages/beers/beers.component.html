@@ -1,0 +1,47 @@
+<section>
+  <div class="searchOneBeer">
+    <input
+      class="search-input"
+      type="text"
+      placeholder="Busca una cerveza"
+      [(ngModel)]="keyWord"
+      (ngModelChange)="onChangeFilter($event)"
+    />
+  </div>
+
+  <ng-template [ngIf]="filteredBeers.length">
+    <div class="beer-collection">
+      <figure class="card" *ngFor="let beer of filteredBeers">
+        <div class="card__img">
+          <img src="{{ beer.cover }}" alt="{{ beer.beer }}" />
+        </div>
+        <div class="card__data">
+          <h3>{{ beer.beer }}</h3>
+          <h4>{{ beer.brewery }}</h4>
+          <p>{{ beer.style }}</p>
+        </div>
+        <div class="card__button">
+          <button (click)="catchBeer(beer)">Editar</button>
+        </div>
+      </figure>
+    </div>
+  </ng-template>
+
+  <ng-template [ngIf]="!filteredBeers.length">
+    <div class="beer-collection">
+      <figure class="card" *ngFor="let beer of beersList">
+        <div class="card__img">
+          <img src="{{ beer.cover }}" alt="{{ beer.beer }}" />
+        </div>
+        <div class="card__data">
+          <h3>{{ beer.beer }}</h3>
+          <h4>{{ beer.brewery }}</h4>
+          <p>{{ beer.style }}</p>
+        </div>
+        <div class="card__button">
+          <button (click)="catchBeer(beer)">Editar</button>
+        </div>
+      </figure>
+    </div>
+  </ng-template>
+</section>

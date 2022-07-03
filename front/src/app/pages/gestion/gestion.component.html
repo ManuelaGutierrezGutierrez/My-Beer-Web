@@ -1,0 +1,17 @@
+<section>
+  <h2>Gestión de la bodega</h2>
+  <form novalidate [formGroup]="beerForm" (ngSubmit)="onSubmit()">
+    <label for="beer">Cerveza</label>
+    <input type="text" id="beer" formControlName="beer" />
+    <label for="brewery">Fábrica</label>
+    <input type="text" id="brewery" formControlName="brewery" />
+    <label for="style">Estilo</label>
+    <input type="text" id="style" formControlName="style" />
+    <label for="cover">Imagen</label>
+    <input type="text" id="cover" formControlName="cover" />
+    <button type="submit">Añadir</button>
+    <button type="button" *ngIf="beerID !== 0" (click)="delete()">
+      Borrar
+    </button>
+  </form>
+</section>

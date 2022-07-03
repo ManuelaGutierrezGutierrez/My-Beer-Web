@@ -1,0 +1,36 @@
+nav {
+  background-color: white;
+  background-position: 30px;
+
+  ul {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  a {
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    height: 60px;
+    width: auto;
+    align-items: baseline;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    a {
+      font-size: 1em;
+    }
+
+    img {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.hero {
+  background-image: url("../../../assets/home-background-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.hero-text {
+  color: white;
+  margin-bottom: 400px;
+  padding: 20px;
+
+  .title {
+    font-size: 5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    .title {
+      font-size: 2em;
+      font-weight: bold;
+    }
+  }
+}
